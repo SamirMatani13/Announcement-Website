@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Announcement Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
+    form {
+      margin-bottom: 20px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #ccc;
+    }
+    
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    
+    #announcementViewer {
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Announcement Website</h1>
+  
+  <form>
+    <h2>Save Announcement</h2>
+    <label for="grades">Choose Grade(s):</label>
+    <select id="grades">
+      <option value="default" selected disabled>Select Grade</option>
+      <option value="9">9</option> 
+      <option value="10">10</option> 
+      <option value="11">11</option> 
+      <option value="12">12</option>
+      <option value="All">All</option> 
+    </select>
+    
+    <label for="genders">Choose Gender(s):</label>
+    <select id="genders">
+      <option value="default" selected disabled>Select Gender</option>
+      <option value="Male">Male</option> 
+      <option value="Female">Female</option>
+      <option value="All">All</option>
+    </select>
+    
+    <label for="inputBox">Announcement:</label>
+    <textarea id="inputBox"></textarea>
+    
+    <label for="teams">Teams:</label>
+    <select id="teams">
+      <option value="default" selected disabled>Select Team</option>
+      <option value="All">All</option>
+      <option value="Team 1">Team 1</option>
+      <option value="Team 2">Team 2</option>
+      <option value="Team 3">Team 3</option>
+      <!-- Add more teams as needed -->
+    </select>
+
+    <button onclick="saveAnnouncement()">Save Announcement</button>
+  </form>
+  
+  <form>
+    <h2>Student Data</h2>
+    <label for="studentGrades">Grades:</label>
+    <select id="studentGrades">
+      <option value="default" selected disabled>Select Grade</option>
+      <option value="9">9</option> 
+      <option value="10">10</option> 
+      <option value="11">11</option> 
+      <option value="12">12</option>
+      <option value="All">All</option> 
+    </select>
+    
+    <label for="studentGenders">Genders:</label>
+    <select id="studentGenders">
+      <option value="default" selected disabled>Select Gender</option>
+      <option value="Male">Male</option> 
+      <option value="Female">Female</option>
+      <option value="All">All</option>
+    </select>
+    
+    <label for="studentTeams">Teams:</label>
+    <select id="studentTeams">
+      <option value="default" selected disabled>Select Team</option>
+      <option value="All">All</option>
+      <option value="Team 1">Team 1</option>
+      <option value="Team 2">Team 2</option>
+      <option value="Team 3">Team 3</option>
+      <!-- Add more teams as needed -->
+    </select>
+    
+    <button onclick="getStudentData()">Submit</button>
+  </form>
+  
+  <h2>Announcement Viewer</h2>
+  <div id="announcementViewer"></div>
+
+  <button onclick="clearLocalStorage()">Clear Local Storage</button>
+  
+  <script src="script.js"></script>
+</body>
+</html>
